@@ -102,7 +102,8 @@ def view_ticket():
     ticket_id = input("\nEnter the ticket ID you would like to view: \n")
     
     while ticket_id.isdigit() == False:
-        ticket_id = input("\nInvalid input, please enter a valid ticket ID: \n")
+        ticket_id = input("\nInvalid input, please retry with a valid ticket ID: \n")
+        return "menu"
 
     for ticket in data["tickets"]:
         if ticket["id"] == int(ticket_id):
